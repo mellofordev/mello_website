@@ -3,9 +3,9 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/details";
 import Link from "next/link";
+import Image from "next/image";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -14,27 +14,19 @@ export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 flex justify-between">
+        <div className="mx-auto w-full max-w-2xl space-y-8 h-full">
+          <div className="gap-2 flex flex-col justify-center items-center">
+          <BlurFade delay={BLUR_FADE_DELAY}>
+            <Image src={DATA.avatarUrl} height={200} width={200} className="h-52 w-52" alt="mello logo" />
+            </BlurFade>
             <div className="flex-col flex flex-1 space-y-1.5">
-              <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10"
-                yOffset={8}
-                text={`mello`}
-              />
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
             </div>
-            <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-             
-              </Avatar>
-            </BlurFade>
+           
           </div>
         </div>
       </section>
@@ -48,7 +40,7 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
-      <section id="projects">
+      {/* <section id="projects">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -88,8 +80,8 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </section>
-      <section id="hackathons">
+      </section> */}
+      {/* <section id="hackathons">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -111,7 +103,7 @@ export default function Page() {
           </BlurFade>
         
         </div>
-      </section>
+      </section> */}
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
@@ -123,14 +115,10 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me {" "}
-                <a href="mailto:your-email@example.com" className="text-blue-500 hover:underline">
+                Want to connect? Follow us on instagram {" "}
+                <a href="https://instagram.com/mello_hq" className="text-blue-500 hover:underline">
                 here
                 </a>{" "}
-               
-               
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
               </p>
             </div>
           </BlurFade>
