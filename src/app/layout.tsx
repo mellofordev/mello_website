@@ -68,6 +68,8 @@ export default function RootLayout({
           </TooltipProvider>
         </ThemeProvider>
       </body>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2027262797434680"
+     crossOrigin="anonymous"></script>
     </html>
   );
 }
