@@ -110,10 +110,10 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to connect? Follow us on instagram {" "}
+                Want to connect? Follow us on instagram
                 <a href="https://instagram.com/mello_hq" className="text-blue-500 hover:underline">
                 here
-                </a>{" "}
+                </a>
               </p>
             </div>
           </BlurFade>
