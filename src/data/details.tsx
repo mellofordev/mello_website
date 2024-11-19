@@ -9,7 +9,7 @@ export const DATA = {
   description:
     "shipping cool products.",
   summary:
-    "we're bunch of students trying to build cool products for the community, we started back in 2016 building small websites, now we are on the mission to create products with generative ai",
+    "We're Bunch of people from kerala, building products that just make sense. No complexity, no confusion -- just technology that works like you think.",
   avatarUrl: "/mello.jpeg",
   
   navbar: [

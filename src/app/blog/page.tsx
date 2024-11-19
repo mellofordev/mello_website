@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Blog",
-  description: "Company blog",
+  description: "thoughts from mello and team!",
 };
 
 const BLUR_FADE_DELAY = 0.04;

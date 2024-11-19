@@ -7,6 +7,11 @@ import { DATA } from "@/data/details";
 import Link from "next/link";
 import Image from "next/image";
 import Markdown from "react-markdown";
+import { Dock,DockIcon } from "@/components/magicui/dock";
+import { Tooltip,TooltipProvider,TooltipTrigger,TooltipContent } from "@/components/ui/tooltip";
+import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -32,7 +37,7 @@ export default function Page() {
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About</h2>
+          <h2 className="text-xl font-bold">Who are we ?</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
@@ -49,7 +54,7 @@ export default function Page() {
                  Products
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out our latest work
+                  Check out our products
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   These are our few projects under development. We are working
